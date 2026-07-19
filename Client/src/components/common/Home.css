@@ -1,0 +1,285 @@
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#f8fbff;
+}
+
+/* Navbar */
+
+.navbar{
+    background:#fff !important;
+    z-index:1000;
+}
+
+.brand-logo{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    text-decoration:none;
+    font-size:30px;
+    font-weight:700;
+    color:#2563eb !important;
+}
+
+.logo-box{
+    width:50px;
+    height:50px;
+    border-radius:15px;
+    background:#2563eb;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.logo-icon{
+    color:#fff;
+    font-size:24px;
+}
+
+.nav-link{
+    font-size:17px;
+    font-weight:500;
+    margin-left:20px;
+    color:#333 !important;
+    transition:.3s;
+}
+
+.nav-link:hover{
+    color:#2563eb !important;
+}
+
+/* Hero */
+
+.hero-section{
+    padding-top:140px;
+    padding-bottom:90px;
+    background:linear-gradient(135deg,#f8fbff,#eef6ff);
+}
+
+.hero-title{
+    font-size:62px;
+    font-weight:800;
+    color:#1d3557;
+    line-height:1.2;
+}
+
+.hero-text{
+    margin-top:25px;
+    font-size:20px;
+    color:#666;
+    line-height:1.8;
+}
+
+.hero-buttons{
+    margin-top:35px;
+}
+
+.hero-buttons .btn{
+    padding:14px 35px;
+    font-size:18px;
+    border-radius:12px;
+}
+
+.hero-image{
+    width:100%;
+    max-width:620px;
+    height:auto;
+    border-radius:20px;
+    filter:drop-shadow(0 20px 35px rgba(37,99,235,.25));
+    animation:floatImage 5s ease-in-out infinite;
+}
+
+/* Sections */
+
+.section-title{
+    text-align:center;
+    font-size:40px;
+    font-weight:700;
+    color:#1d3557;
+    margin-bottom:20px;
+}
+
+/* Features */
+
+.feature-card{
+    border:none;
+    border-radius:18px;
+    text-align:center;
+    padding:25px;
+    height:100%;
+    transition:.4s;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+}
+
+.feature-card:hover{
+    transform:translateY(-10px);
+}
+
+.feature-icon{
+    font-size:50px;
+    color:#2563eb;
+    margin-bottom:20px;
+}
+
+.feature-card h5{
+    font-weight:600;
+    margin-bottom:15px;
+}
+
+.feature-card p{
+    color:#666;
+    margin-bottom:0;
+}
+
+/* Statistics */
+
+.stats-section{
+    background:#2563eb;
+    color:#fff;
+    padding:80px 0;
+    text-align:center;
+}
+
+.stats-section h2{
+    font-size:52px;
+    font-weight:700;
+}
+
+.stats-section p{
+    font-size:20px;
+    margin-bottom:0;
+}
+
+/* Testimonials */
+
+.testimonial-card{
+    border:none;
+    border-radius:18px;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+    transition:.4s;
+    padding:15px;
+    height:100%;
+}
+
+.testimonial-card:hover{
+    transform:translateY(-10px);
+}
+
+.testimonial-card p{
+    color:#666;
+    line-height:1.8;
+}
+
+/* Footer */
+
+.footer{
+    background:#0f172a;
+    color:#fff;
+    text-align:center;
+    padding:60px 20px;
+}
+
+.footer h3{
+    font-size:32px;
+    margin-bottom:15px;
+}
+
+.footer p{
+    color:#cbd5e1;
+    margin:8px 0;
+}
+
+/* Floating Image */
+
+@keyframes floatImage{
+
+    0%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-18px);
+    }
+
+    100%{
+        transform:translateY(0);
+    }
+
+}
+
+/* Fixed Navbar Scroll */
+
+#features,
+#specialities{
+    scroll-margin-top:90px;
+}
+
+/* Responsive */
+
+@media(max-width:992px){
+
+.hero-section{
+    text-align:center;
+}
+
+.hero-title{
+    font-size:46px;
+}
+
+.hero-buttons{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:15px;
+}
+
+.hero-image{
+    margin-top:40px;
+    max-width:500px;
+}
+
+}
+
+@media(max-width:576px){
+
+.brand-logo{
+    font-size:24px;
+}
+
+.hero-title{
+    font-size:36px;
+}
+
+.hero-text{
+    font-size:17px;
+}
+
+.section-title{
+    font-size:32px;
+}
+
+.stats-section h2{
+    font-size:38px;
+}
+
+.stats-section p{
+    margin-bottom:30px;
+}
+
+.hero-image{
+    max-width:350px;
+}
+
+}
