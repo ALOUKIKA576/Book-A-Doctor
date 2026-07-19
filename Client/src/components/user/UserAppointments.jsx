@@ -47,6 +47,8 @@ console.log("RESPONSE DATA:", JSON.stringify(res.data, null, 2));
   };
 
   const cancelAppointment = async (appointmentId) => {
+
+  console.log("CANCEL APPOINTMENT ID:", appointmentId);
   try {
 
     const res = await axios.post(
@@ -122,6 +124,7 @@ console.log("RESPONSE DATA:", JSON.stringify(res.data, null, 2));
                   <th>Doctor Name</th>
                   <th>Appointment Date</th>
                   <th>Status</th>
+                  <th>Action</th>
                 </tr>
               </thead>
 
@@ -133,57 +136,73 @@ console.log("RESPONSE DATA:", JSON.stringify(res.data, null, 2));
 
                     <tr key={appointment._id}>
 
-                      <td>
-                        Dr. {appointment.doctorInfo?.fullName}
-                      </td>
+  <td>
+    Dr. {appointment.doctorInfo?.fullName}
+  </td>
 
-                      <td>
-                        {new Date(
-                          appointment.date
-                        ).toLocaleDateString()}
-                      </td>
-
-                      <td>
-
-                        {appointment.status?.toLowerCase() === "pending" && (
-                          <Badge
-                            bg="warning"
-                            text="dark"
-                            pill
-                          >
-                            Pending
-                          </Badge>
-                        )}
-
-                        {appointment.status?.toLowerCase() === "approved" && (
-                          <Badge
-                            bg="success"
-                            pill
-                          >
-                            Approved
-                          </Badge>
-                        )}
-
-                        {appointment.status?.toLowerCase() === "rejected" && (
-                          <Badge
-                            bg="danger"
-                            pill
-                          >
-                            Rejected
-                          </Badge>
-                        )}
-
-                        {appointment.status?.toLowerCase() === "cancelled" && (
-                          <Badge
-                            bg="secondary"
-                            pill
-                          >
-                            Cancelled
-                          </Badge>
-                        )}
+  <td>
+    {new Date(
+      appointment.date
+    ).toLocaleDateString()}
+  </td>
 
 
-                      </td>
+  {/* Status Column */}
+  <td>
+
+    {appointment.status?.toLowerCase() === "pending" && (
+      <Badge
+        bg="warning"
+        text="dark"
+        pill
+      >
+        Pending
+      </Badge>
+    )}
+
+    {appointment.status?.toLowerCase() === "approved" && (
+      <Badge
+        bg="success"
+        pill
+      >
+        Approved
+      </Badge>
+    )}
+
+    {appointment.status?.toLowerCase() === "rejected" && (
+      <Badge
+        bg="danger"
+        pill
+      >
+        Rejected
+      </Badge>
+    )}
+
+    {appointment.status?.toLowerCase() === "cancelled" && (
+      <Badge
+        bg="secondary"
+        pill
+      >
+        Cancelled
+      </Badge>
+    )}
+
+  </td>
+
+
+  {/* Action Column */}
+  <td>
+
+    {appointment.status?.toLowerCase() === "pending" && (
+      <Button
+        variant="danger"
+        size="sm"
+        onClick={() => cancelAppointment(appointment._id)}
+      >
+        Cancel
+      </Button>
+    )}
+            </td>
 
                     </tr>
 

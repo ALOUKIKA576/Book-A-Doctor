@@ -313,6 +313,19 @@ const AdminHome = () => {
     </span>
   )}
 
+  {item.status?.toLowerCase() === "cancelled" && (
+  <span
+    className="badge bg-secondary"
+    style={{
+      padding: "8px 15px",
+      borderRadius: "20px",
+      fontSize: "14px",
+    }}
+  >
+    Cancelled
+  </span>
+)}
+
   {!item.status && (
     <span
       className="badge bg-secondary"

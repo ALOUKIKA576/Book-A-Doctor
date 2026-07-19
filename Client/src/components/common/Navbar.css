@@ -1,0 +1,138 @@
+.custom-navbar {
+  background: linear-gradient(90deg, #0d6efd, #2563eb) !important;
+  min-height: 70px;
+  padding: 0 !important;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+}
+
+
+.custom-navbar .container {
+  height: 70px;
+  display: flex;
+  align-items: center;
+}
+
+
+/* Logo */
+.custom-navbar .navbar-brand {
+  color: white !important;
+  font-weight: 700;
+  font-size: 23px;
+  display: flex;
+  align-items: center;
+}
+
+
+/* Menu items */
+.custom-navbar .navbar-nav {
+  display: flex;
+  align-items: center;
+}
+
+
+.custom-navbar .nav-link {
+  color: white !important;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+
+/* Welcome text */
+.welcome-text {
+  color: white;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+}
+
+
+/* Logout button */
+.logout-btn {
+  display: flex;
+  align-items: center;
+  height: 38px;
+}
+
+.custom-navbar {
+  background: linear-gradient(90deg,#0d6efd,#2563eb) !important;
+  min-height:70px;
+  box-shadow:0 4px 15px rgba(0,0,0,0.15);
+}
+
+
+.navbar-container {
+  display:flex;
+  align-items:center;
+}
+
+
+.navbar-logo {
+  color:white !important;
+  font-size:23px;
+  font-weight:700;
+  white-space:nowrap;
+  cursor:pointer;
+}
+
+
+/* Center menu */
+
+.navbar-options {
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:18px;
+  margin:auto;
+}
+
+
+.navbar-options .nav-link {
+
+  color:white !important;
+  font-weight:500;
+  display:flex;
+  align-items:center;
+  gap:6px;
+  white-space:nowrap;
+
+}
+
+
+/* User area */
+
+.user-section {
+
+  display:flex;
+  align-items:center;
+  gap:15px;
+  white-space:nowrap;
+
+}
+
+
+.welcome-text {
+
+  color:white;
+  font-weight:600;
+  display:flex;
+  align-items:center;
+  gap:6px;
+
+}
+
+
+.logout-btn {
+
+  background:white !important;
+  color:#0d6efd !important;
+  border:none !important;
+  font-weight:700;
+  border-radius:25px;
+  padding:8px 22px;
+  display:flex;
+  align-items:center;
+
+}
